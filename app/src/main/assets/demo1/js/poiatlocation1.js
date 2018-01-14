@@ -1,9 +1,10 @@
 var added = false;	// Flag to hold whether markers have been added
 		var poiOne;		// Reference to the first poin of interest
 		var poiTwo;		// Reference to the second point of interest
-AR.logger.Debug("Debug Mode Activated");
+
 		// Called when location changes
 		function locationChanged(lat, lon, alt, acc){
+
 
 			// First time the function runs wer add the markers
 			if (!added){
@@ -26,7 +27,8 @@ AR.logger.Debug("Debug Mode Activated");
 					}
 				});
 
-                AR.logger.debug("Added Marker");
+                AR.logger.debug("Debug Mode Activated");
+                AR.logger.debug("Added Marker - Hup ya boyo ya");
 				// ------ Second Marker ----------
 
 				// create the image for the marker

@@ -13,21 +13,13 @@
         android:theme="@style/AppTheme.AppBarOverlay"
         tools:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:requiresFadingEdge="none"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
     </android.support.design.widget.AppBarLayout>
 
     <com.wikitude.architect.ArchitectView
         android:id="@+id/architectView"
         android:layout_width="match_parent"
-        android:layout_height="239dp"
-        android:visibility="visible" >
+        android:layout_height="400dp"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/lblLocation"
@@ -38,17 +30,6 @@
             android:textColor="@color/white"
             android:textSize="16dp" />
     </com.wikitude.architect.ArchitectView>
-
-    <Button
-        android:id="@+id/btnShowLocation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@color/btn_bg"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="@string/btn_get_location"
-        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnLocationUpdates"
