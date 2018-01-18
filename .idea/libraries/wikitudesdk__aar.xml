@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="wikitudesdk:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/386d2b1928fccfdf09f2d8d7201805d5c938e00b/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/386d2b1928fccfdf09f2d8d7201805d5c938e00b/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

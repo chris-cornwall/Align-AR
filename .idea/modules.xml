@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FYP.iml" filepath="$PROJECT_DIR$/FYP.iml" />
-      <module fileurl="file://C:\Users\cornwall\Desktop\FYP\Wikitude2.iml" filepath="C:\Users\cornwall\Desktop\FYP\Wikitude2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjetAR.iml" filepath="$PROJECT_DIR$/ProjetAR.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\cornwall\Desktop\FYP\app\app.iml" filepath="C:\Users\cornwall\Desktop\FYP\app\app.iml" />
     </modules>
   </component>
 </project>

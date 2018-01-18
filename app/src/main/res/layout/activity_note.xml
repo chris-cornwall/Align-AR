@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TextViewTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajoutez une note de signalement temporaire sur votre position:"
+            android:textSize="10pt"></TextView>
+
+        <EditText
+            android:id="@+id/EditTextName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_'"
+            android:hint="Nom de la note"
+            android:inputType="textPersonName"></EditText>
+
+        <EditText
+            android:id="@+id/EditTextDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 àâéèêëïôùç().,:!-_'"
+            android:hint="Description de la note"
+            android:inputType="textMultiLine"
+            android:lines="5"></EditText>
+
+        <Button
+            android:id="@+id/ButtonCreateNote"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:onClick="sendPOI"
+            android:text="@string/createNote"></Button>
+
+        <TextView
+            android:id="@+id/TextViewInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="*Certains caractères ne sont pas autorisés et n'apparaitrons pas."></TextView>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/menuToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|right"
+            android:background="@color/cardview_light_background"
+            android:elevation="15dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </LinearLayout>
+</ScrollView>
