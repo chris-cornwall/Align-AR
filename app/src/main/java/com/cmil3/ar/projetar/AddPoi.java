@@ -1,4 +1,4 @@
-package com.cmil3.ar.projetar;
+package com.antenna_alignment.nuig;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,7 +16,7 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static com.cmil3.ar.projetar.R.layout.activity_note;
+import static com.antenna_alignment.nuig.R.layout.activity_note;
 
 public class AddPoi extends Activity implements LocationListener {
 

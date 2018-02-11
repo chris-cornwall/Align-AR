@@ -1,4 +1,4 @@
-package com.cmil3.ar.projetar;
+package com.antenna_alignment.nuig;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.cmil3.ar.projetar", appContext.getPackageName());
+        assertEquals("com.antenna_alignment.nuig", appContext.getPackageName());
     }
 }

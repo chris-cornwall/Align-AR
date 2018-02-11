@@ -1,4 +1,4 @@
-    package com.cmil3.ar.projetar;
+    package com.antenna_alignment.nuig;
     import android.Manifest;
 import android.accounts.AccountManager;
 import android.app.Activity;
@@ -51,9 +51,9 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
 import static android.R.attr.id;
-import static com.cmil3.ar.projetar.R.id.bottom;
-import static com.cmil3.ar.projetar.R.id.menuToolbar;
-import static com.cmil3.ar.projetar.R.id.wrap_content;
+import static com.antenna_alignment.nuig.R.id.bottom;
+import static com.antenna_alignment.nuig.R.id.menuToolbar;
+import static com.antenna_alignment.nuig.R.id.wrap_content;
 
     public class Calendar extends Activity implements EasyPermissions.PermissionCallbacks {
         GoogleAccountCredential mCredential;

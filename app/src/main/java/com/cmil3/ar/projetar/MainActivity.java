@@ -1,4 +1,4 @@
-package com.cmil3.ar.projetar;
+package com.antenna_alignment.nuig;
 
 import android.Manifest;
 import android.content.Intent;

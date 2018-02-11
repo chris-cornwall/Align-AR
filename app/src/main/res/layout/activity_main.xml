@@ -5,7 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cmil3.ar.projetar.MainActivity">
+    tools:context="com.antenna_alignment.nuig.MainActivity">
 
 
     <com.wikitude.architect.ArchitectView
