@@ -41,7 +41,7 @@
 
         >
         <activity
-            android:name=".MainActivity"
+            android:name="com.antenna_alignment.nuig.MainActivity"
             android:configChanges="screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -66,15 +66,15 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".Map"
+            android:name="com.antenna_alignment.nuig.Map"
             android:label="@string/title_activity_carte" />
 
         <activity
-            android:name=".Calendar"
+            android:name="com.antenna_alignment.nuig.Calendar"
             android:label="Agenda" />
 
         <activity
-            android:name=".AddPoi"
+            android:name="com.antenna_alignment.nuig.AddPoi"
             android:label="Note" />
     </application>
 
