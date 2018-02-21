@@ -11,7 +11,7 @@
     
     <title>My ARchitect World</title>
 
-        <script src="js/poi.js"></script>
+        <!--script src="js/poi.js"></script-->
         <script src="https://www.wikitude.com/libs/architect.js"></script>
     <!--    <script src="../ade.js"></script> -->
 
@@ -26,6 +26,9 @@
     <!-- jquery JS files -->
     <script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="jquery/jquery.mobile-1.3.2.min.js"></script>
+
+        <!--fspl logic-->
+        <script type="text/javascript" src="js/fspl.js"></script>
 
     <!-- marker representation-->
     <script src="js/marker.js"></script>
@@ -44,7 +47,7 @@
 
             <!-- header of UI holding feature buttons -->
             <div id ="header-status" data-role="header" data-position="fixed" data-theme="c">
-                <a href="javascript: World.showRange();" data-icon="gear" data-inline="true" data-mini="true">Data</a>
+                <a href="javascript: World.showRange();" data-icon="gear" data-inline="true" data-mini="true">Preferences</a>
                 <a href="javascript: World.reloadPlaces()" data-icon="refresh" >Reload</a>
                 <h1></h1>
             </div>
@@ -85,10 +88,20 @@
                     <h3 id="poi-detail-title"></h3>
 
                     <!-- description -->
-                    <h4 id="poi-detail-description"></h4>
+                     <h4>Description <a id="poi-detail-description"></a></h4>
+
 
                     <!-- distance -->
                     <h4>Distance: <a id="poi-detail-distance"></a></h4>
+
+                     <!-- Azimuth -->
+                     <h4>Azimuth: <a id="poi-detail-distance2"></a></h4>
+
+                     <!-- distance -->
+                     <h4>Signal Strength: <a id="poi-detail-distance3"></a></h4>
+
+                     <!-- distance -->
+                     <h4>Elevation: <a id="poi-detail-altitude"></a></h4>
                  </div>
             </div>
 
