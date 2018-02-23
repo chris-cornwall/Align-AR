@@ -1,6 +1,5 @@
 var ServerInformation = {
 	POIDATA_SERVER: "https://raw.githubusercontent.com/chris-cornwall/softeng/master/pois.json",
-	POIDATA_SERVER_ARG_DES: "des",
 	POIDATA_SERVER_ARG_LAT: "lat",
 	POIDATA_SERVER_ARG_LON: "lon",
 	POIDATA_SERVER_ARG_ALT: "alt",
@@ -60,6 +59,8 @@ var World = {
 				"latitude": parseFloat(poiData[currentPlaceNr].latitude),
 				"longitude": parseFloat(poiData[currentPlaceNr].longitude),
 				"altitude": parseFloat(poiData[currentPlaceNr].altitude),
+				"power": parseFloat(poiData[currentPlaceNr].power),
+				"gain": parseFloat(poiData[currentPlaceNr].gain),
 				"frequency": parseFloat(poiData[currentPlaceNr].frequency),
 				"title": poiData[currentPlaceNr].name,
 				"description": poiData[currentPlaceNr].description
@@ -85,11 +86,6 @@ var World = {
 		// set distance slider to 100%
 		$("#panel-distance-range").val(100);
 		$("#panel-distance-range").slider("refresh");
-		//Just testing code below.. DELETE
-//	    $("#poi-detail-title").html(World.markerList.pop.poiData.title);
-//        $("#poi-detail-description").html(World.markerList.pop.poiData.description);
-//        $("#poi-detail-altitude").html(World.markerList.pop.poiData.altitude);
-//        $("#panel-poidetail").panel("open", 123);
 	},
 
 	// sets/updates distances of all makers so they are available way faster than calling (time-consuming) distanceToUser() method all the time
@@ -168,12 +164,19 @@ var World = {
 		$("#poi-detail-altitude").html(marker.poiData.altitude);
 		console.log("Altitude: " + marker.poiData.altitude);
 
+
 		/* It's ok for AR.Location subclass objects to return a distance of `undefined`. In case such a distance was calculated when all distances were queried in `updateDistanceToUserValues`, we recalcualte this specific distance before we update the UI. */
 		if( undefined == marker.distanceToUser ) {
 			marker.distanceToUser = marker.markerObject.locations[0].distanceToUser();
 		}
 		var distanceToUserValue = (marker.distanceToUser > 999) ? ((marker.distanceToUser / 1000).toFixed(2) + " km") : (Math.round(marker.distanceToUser) + " m");
 		$("#poi-detail-distance").html(distanceToUserValue);
+
+		console.log("Distance to User: " + marker.distanceToUser);
+
+		var fspl = new FSPL(marker.poiData, marker.distanceToUser);
+		//fspl = fspl.toFixed(3);
+		$("#poi-detail-strength").html(fspl);
 
 
 		// show panel
@@ -280,7 +283,7 @@ var World = {
 		} else {
 
 			// no places are visible, because the are not loaded yet
-			World.updateStatusMessage('Lieux en cours de chargement', true);
+			World.updateStatusMessage('Loading antennas', true);
 		}
 	},
 
@@ -290,10 +293,10 @@ var World = {
 			if (World.userLocation) {
 				World.requestDataFromServer(World.userLocation.latitude, World.userLocation.longitude);
 			} else {
-				World.updateStatusMessage('Position inconnue.', true);
+				World.updateStatusMessage('Unknown location.', true);
 			}
 		} else {
-			World.updateStatusMessage('Chargement déjà en cours', true);
+			World.updateStatusMessage('Loading in progress', true);
 		}
 	},
 
