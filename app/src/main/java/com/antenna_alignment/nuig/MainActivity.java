@@ -9,6 +9,7 @@ import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,30 +17,35 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.antenna_alignment.nuig.R;
+import com.google.android.gms.location.*;
 import com.wikitude.architect.ArchitectStartupConfiguration;
 import com.wikitude.architect.ArchitectView;
 
+import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 import static java.lang.String.*;
 
-public class MainActivity extends AppCompatActivity implements LocationListener{
+public class MainActivity extends AppCompatActivity implements LocationListener {
 
     private ArchitectView architectView;
 
     private LocationManager lm;
 
-    private double latitude;
-    private double longitude;
-    private double altitude = 0;
+    private double latitude, longitude, altitude, lastAltitude;
     private float accuracy;
+
+    private LocationRequest mLocationRequest;
+
+    private long UPDATE_INTERVAL = 10 * 1000;  /* 10 secs */
+    private long FASTEST_INTERVAL = 2000; /* 2 sec */
 
 
     //initiate tool bar with buttons and actions
-    private void initToolbar() {
+/*    private void initToolbar() {
         Toolbar toolbarBottom = (Toolbar) findViewById(R.id.menuToolbar);
         toolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch(item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.action_main:
                         break;
                     case R.id.action_carte:
@@ -65,14 +71,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         });
         // Inflate a menu to be displayed in the toolbar
         toolbarBottom.inflateMenu(R.menu.menumain_rotated);
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initToolbar();
+        //initToolbar();
+        startLocationUpdates();
 
         this.architectView = (ArchitectView) this.findViewById(R.id.architectView);
         final ArchitectStartupConfiguration config = new ArchitectStartupConfiguration();
@@ -143,18 +150,69 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                               fonctions de localisation                                            //
+    //                               Location Functions                                                      //
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    protected void startLocationUpdates() {
+
+        // Create the location request to start receiving updates
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(UPDATE_INTERVAL);
+        mLocationRequest.setFastestInterval(FASTEST_INTERVAL);
+
+        // Create LocationSettingsRequest object using location request
+        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder();
+        builder.addLocationRequest(mLocationRequest);
+        LocationSettingsRequest locationSettingsRequest = builder.build();
+
+        // Check whether location settings are satisfied
+        // https://developers.google.com/android/reference/com/google/android/gms/location/SettingsClient
+        SettingsClient settingsClient = LocationServices.getSettingsClient(this);
+        settingsClient.checkLocationSettings(locationSettingsRequest);
+
+        // new Google API SDK v11 uses getFusedLocationProviderClient(this)
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        getFusedLocationProviderClient(this).requestLocationUpdates(mLocationRequest, new LocationCallback() {
+                    @Override
+                    public void onLocationResult(LocationResult locationResult) {
+                        // do work here
+                        System.out.println("INSIDE NEW LOCATION FUNCTION");
+                        onLocationChanged(locationResult.getLastLocation());
+                    }
+                },
+                Looper.myLooper());
+    }
 
     @Override
     public void onLocationChanged(Location location) {
         latitude = location.getLatitude();
         longitude = location.getLongitude();
-        altitude = 0;
+        altitude = location.getAltitude();
         accuracy = location.getAccuracy();
 
-        architectView.setLocation(latitude, longitude, altitude, accuracy); //mise a jour de la position
+        //Altitude sometimes reads as zero, here's a fix for when that happens
+        if (altitude!=0)
+            lastAltitude = altitude;
+        else
+            altitude = lastAltitude;
+
+
+
+        architectView.setLocation(latitude, longitude, altitude, accuracy);
+        System.out.println("ARCH VIEW ALT: " + altitude);
+        System.out.println("ARCH VIEW LAT: " + latitude);
+        System.out.println("ARCH VIEW LONG: " + longitude);
+        System.out.println("ARCH VIEW ACC: " + accuracy);
 
     }
 
@@ -180,14 +238,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     @Override
     public void onProviderEnabled(String provider) {
-       // String msg = format(getResources().getString(R.string.provider_enabled), provider);
-       // Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        // String msg = format(getResources().getString(R.string.provider_enabled), provider);
+        // Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         architectView.setLocation(latitude, longitude, altitude, accuracy);
     }
 
     @Override
     public void onProviderDisabled(String provider) {
-       // String msg = format(getResources().getString(R.string.provider_disabled), provider);
-       // Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+         //String msg = format(getResources().getString(R.string.provider_disabled), provider);
+         //Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

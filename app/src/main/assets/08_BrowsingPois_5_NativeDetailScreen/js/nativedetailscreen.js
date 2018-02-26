@@ -162,7 +162,7 @@ var World = {
 		$("#poi-detail-title").html(marker.poiData.title);
 		$("#poi-detail-description").html(marker.poiData.description);
 		$("#poi-detail-altitude").html(marker.poiData.altitude);
-		console.log("Altitude: " + marker.poiData.altitude);
+		//console.log("Marker: " + marker.getBoundingRectangle());
 
 
 		/* It's ok for AR.Location subclass objects to return a distance of `undefined`. In case such a distance was calculated when all distances were queried in `updateDistanceToUserValues`, we recalcualte this specific distance before we update the UI. */
@@ -174,8 +174,9 @@ var World = {
 
 		console.log("Distance to User: " + marker.distanceToUser);
 
+
 		var fspl = new FSPL(marker.poiData, marker.distanceToUser);
-		//fspl = fspl.toFixed(3);
+		// fspl = fspl.toFixed(3);
 		$("#poi-detail-strength").html(fspl);
 
 
@@ -309,7 +310,7 @@ var World = {
 
 		// server-url to JSON content provider
 		var serverUrl = ServerInformation.POIDATA_SERVER + "?" + ServerInformation.POIDATA_SERVER_ARG_LAT + "=" + lat + "&" + ServerInformation.POIDATA_SERVER_ARG_LON + "=" + lon + "&" + ServerInformation.POIDATA_SERVER_ARG_NR_POIS + "=20";
-
+        console.log(serverUrl);
 		var jqxhr = $.getJSON(serverUrl, function(data) {
 				World.loadPoisFromJsonData(data);
 			})

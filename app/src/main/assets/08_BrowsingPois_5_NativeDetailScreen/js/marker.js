@@ -15,6 +15,8 @@ function Marker(poiData) {
 
     // create the AR.GeoLocation from the poi data
     var markerLocation = new AR.GeoLocation(poiData.latitude, poiData.longitude, poiData.altitude);
+    var altitude = markerLocation.altitude;
+    console.log("Altitude: " + altitude);
   // var markerLocation = new AR.GeoLocation(53.280290, -9.058741, 0);
 
     // create an AR.ImageDrawable for the marker in idle state
