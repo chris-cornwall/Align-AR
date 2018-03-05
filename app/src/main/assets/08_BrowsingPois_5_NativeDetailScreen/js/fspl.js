@@ -26,9 +26,14 @@ function FSPL(poiData, distance) {
 
     // Receiver power
     var rPower = eirp + fspl;
-
+$("#poi-detail-strength").html(rPower);
     console.log("RPOWER: " + rPower);
 
-    return rPower;
 
-    }
+    var properties = {
+    "fspl": rPower
+    };
+
+
+   return properties;
+ }

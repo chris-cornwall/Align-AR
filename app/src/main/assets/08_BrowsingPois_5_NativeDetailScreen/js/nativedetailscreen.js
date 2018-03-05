@@ -1,5 +1,5 @@
 var ServerInformation = {
-	POIDATA_SERVER: "https://raw.githubusercontent.com/chris-cornwall/softeng/master/pois.json",
+	POIDATA_SERVER: "http://danu6.it.nuigalway.ie/ITChris/pois.json",
 	POIDATA_SERVER_ARG_LAT: "lat",
 	POIDATA_SERVER_ARG_LON: "lon",
 	POIDATA_SERVER_ARG_ALT: "alt",
@@ -61,6 +61,8 @@ var World = {
 				"altitude": parseFloat(poiData[currentPlaceNr].altitude),
 				"power": parseFloat(poiData[currentPlaceNr].power),
 				"gain": parseFloat(poiData[currentPlaceNr].gain),
+				"azimuth": parseFloat(poiData[currentPlaceNr].azimuth),
+				"elevation":  parseFloat(poiData[currentPlaceNr].altitude),
 				"frequency": parseFloat(poiData[currentPlaceNr].frequency),
 				"title": poiData[currentPlaceNr].name,
 				"description": poiData[currentPlaceNr].description
@@ -161,7 +163,9 @@ var World = {
 		// update panel values
 		$("#poi-detail-title").html(marker.poiData.title);
 		$("#poi-detail-description").html(marker.poiData.description);
-		$("#poi-detail-altitude").html(marker.poiData.altitude);
+		$("#poi-detail-elevation").html(marker.poiData.elevation);
+		$("#poi-detail-azimuth").html(marker.poiData.azimuth);
+
 		//console.log("Marker: " + marker.getBoundingRectangle());
 
 
@@ -176,8 +180,9 @@ var World = {
 
 
 		var fspl = new FSPL(marker.poiData, marker.distanceToUser);
-		// fspl = fspl.toFixed(3);
-		$("#poi-detail-strength").html(fspl);
+		//fspl = fspl.toFixed(3);
+		console.log("FSPL: " + fspl['fspl']);
+		$("#poi-detail-strength").html(fspl['fspl']);
 
 
 		// show panel
