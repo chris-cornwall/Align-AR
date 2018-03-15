@@ -6,6 +6,7 @@ var ServerInformation = {
 	POIDATA_SERVER_ARG_NR_POIS: "nrPois"
 };
 
+
 // implementation of AR-Experience (aka "World")
 var World = {
 
@@ -31,6 +32,11 @@ var World = {
 
 	locationUpdateCounter: 0,
 	updatePlacemarkDistancesEveryXLocationUpdates: 10,
+
+	//test
+	testFunc: function testFunction(){
+	console.log("Test worked");
+	},
 
 	// called to inject new POI data
 	loadPoisFromJsonData: function loadPoisFromJsonDataFn(poiData) {
@@ -66,7 +72,6 @@ var World = {
 				"frequency": parseFloat(poiData[currentPlaceNr].frequency),
 				"title": poiData[currentPlaceNr].name,
 				"description": poiData[currentPlaceNr].description
-
 			};
 
 // poiData[currentPlaceNr].description
@@ -74,10 +79,7 @@ var World = {
 			World.markerList.push(new Marker(singlePoi));
 		}
 
-        for (var i=0; i<World.markerList.length; i++){
-            console.log("HERE");
-            console.log("Description: " + World.markerList[i].poiData.description);
-        }
+
 
 		// updates distance information of all placemarks
 		World.updateDistanceToUserValues();
@@ -119,6 +121,7 @@ var World = {
 	*/
 	// user clicked "More" button in POI-detail panel -> fire event to open native screen
 	onPoiDetailMoreButtonClicked: function onPoiDetailMoreButtonClickedFn() {
+	    console.log("MORE BUTTON CLICKED");
 		var currentMarker = World.currentMarker;
 		var architectSdkUrl = "architectsdk://markerselected?id=" + encodeURIComponent(currentMarker.poiData.id) + "&title=" + encodeURIComponent(currentMarker.poiData.title) + "&description=" + encodeURIComponent(currentMarker.poiData.description);
 		/*
@@ -160,11 +163,14 @@ var World = {
 	onMarkerSelected: function onMarkerSelectedFn(marker) {
 		World.currentMarker = marker;
 
+        //TODO: Need to make units smarter...
 		// update panel values
 		$("#poi-detail-title").html(marker.poiData.title);
 		$("#poi-detail-description").html(marker.poiData.description);
-		$("#poi-detail-elevation").html(marker.poiData.elevation);
-		$("#poi-detail-azimuth").html(marker.poiData.azimuth);
+		$("#poi-detail-gain").html(marker.poiData.gain + "dBi");
+		$("#poi-detail-frequency").html(marker.poiData.frequency + "MHz");
+		$("#poi-detail-elevation").html((marker.poiData.elevation) + " m");
+		$("#poi-detail-azimuth").html(marker.poiData.azimuth + "°");
 
 		//console.log("Marker: " + marker.getBoundingRectangle());
 
@@ -179,10 +185,11 @@ var World = {
 		console.log("Distance to User: " + marker.distanceToUser);
 
 
-		var fspl = new FSPL(marker.poiData, marker.distanceToUser);
-		//fspl = fspl.toFixed(3);
-		console.log("FSPL: " + fspl['fspl']);
-		$("#poi-detail-strength").html(fspl['fspl']);
+		var signal = new Signal(marker.poiData, marker.distanceToUser);
+		//signal = signal.toFixed(3);
+		console.log("Signal: " + signal['signal']);
+		//TODO: Need to make units smarter...
+		$("#poi-detail-strength").html((signal['snr'].toFixed(3)) + " dB");
 
 
 		// show panel
@@ -345,6 +352,20 @@ var World = {
 
 };
 
+// Remove other markers from screen when one is selected
+function deleteMarkers(Marker) {
+  for (var i=0; i<World.markerList.length; i++){
+            if (World.markerList[i].poiData.id == Marker.poiData.id){
+            console.log("ID: " + World.markerList[i].poiData.id);
+            console.log("ID: " + Marker.poiData.id);
+
+               /* World.markerList.splice(i,1);
+                AR.context.destroyAll();*/
+
+            }
+      }
+
+}
 
 /* forward locationChanges to custom function */
 AR.context.onLocationChanged = World.locationChanged;

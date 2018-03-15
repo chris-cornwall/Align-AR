@@ -15,4 +15,5 @@
     <string name="addPoi">Add antenna location</string>
     <string name="createNote">Create note</string>
     <string name="menu">Menu</string>
+    <string name="title_activity_receiver">ReceiverActivity</string>
 </resources>

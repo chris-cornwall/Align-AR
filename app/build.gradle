@@ -25,6 +25,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.android.support:design:25.4.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -42,9 +43,14 @@ dependencies {
 
     //calendar
     compile 'pub.devrel:easypermissions:0.2.1'
-    compile('com.google.api-client:google-api-client-android:1.22.0') { exclude group: 'org.apache.httpcomponents' }
-    compile('com.google.apis:google-api-services-calendar:v3-rev249-1.22.0') { exclude group: 'org.apache.httpcomponents' }
+    compile('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-calendar:v3-rev249-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
 }
+
 
 
 repositories {

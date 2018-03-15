@@ -113,6 +113,7 @@ function Marker(poiData) {
 
 Marker.prototype.getOnClickTrigger = function(marker) {
 
+
     /*
         The setSelected and setDeselected functions are prototype Marker functions. 
         Both functions perform the same steps but inverted.
@@ -127,6 +128,10 @@ Marker.prototype.getOnClickTrigger = function(marker) {
 
             } else {
                 Marker.prototype.setSelected(marker);
+                $.getScript('nativedetailscreen.js')
+                {
+                    deleteMarkers(marker);
+                };
                 try {
                     World.onMarkerSelected(marker);
                 } catch (err) {
