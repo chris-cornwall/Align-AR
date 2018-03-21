@@ -292,7 +292,8 @@ var World = {
 
 			// open panel
 			$("#panel-distance").trigger("updatelayout");
-			$("#panel-distance").panel("open", 1234);
+            $("#panel-distance").panel("open", 1234);
+
 		} else {
 
 			// no places are visible, because the are not loaded yet
@@ -300,6 +301,26 @@ var World = {
 		}
 	},
 
+    showMenu: function showMenuFn() {
+    		if (World.markerList.length > 0) {
+
+    			// update labels on every range movement
+    			$('#panel-distance-range').change(function() {
+    				World.updateRangeValues();
+    			});
+
+    			World.updateRangeValues();
+    			World.handlePanelMovements();
+
+    			// open panel
+    			$("#panel-menu").trigger("updatelayout");
+                $("#panel-menu").panel("open", 1234);
+    		} else {
+
+    			// no places are visible, because the are not loaded yet
+    			World.updateStatusMessage('Loading antennas', true);
+    		}
+    	},
 	// reload places from content source
 	reloadPlaces: function reloadPlacesFn() {
 		if (!World.isRequestingData) {
@@ -322,7 +343,6 @@ var World = {
 
 		// server-url to JSON content provider
 		var serverUrl = ServerInformation.POIDATA_SERVER + "?" + ServerInformation.POIDATA_SERVER_ARG_LAT + "=" + lat + "&" + ServerInformation.POIDATA_SERVER_ARG_LON + "=" + lon + "&" + ServerInformation.POIDATA_SERVER_ARG_NR_POIS + "=20";
-        console.log(serverUrl);
 		var jqxhr = $.getJSON(serverUrl, function(data) {
 				World.loadPoisFromJsonData(data);
 			})

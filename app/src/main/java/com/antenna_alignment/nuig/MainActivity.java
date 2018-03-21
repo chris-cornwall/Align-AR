@@ -8,12 +8,17 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.GestureDetector;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.widget.Toast;
 
 import com.antenna_alignment.nuig.R;
@@ -24,7 +29,7 @@ import com.wikitude.architect.ArchitectView;
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 import static java.lang.String.*;
 
-public class MainActivity extends AppCompatActivity implements LocationListener {
+public class MainActivity extends AppCompatActivity implements LocationListener, GestureDetector.OnGestureListener {
 
     private ArchitectView architectView;
 
@@ -37,20 +42,21 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     private long UPDATE_INTERVAL = 10 * 1000;  /* 10 secs */
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
+    private GestureDetectorCompat detector;
 
 
     //initiate tool bar with buttons and actions
-/*    private void initToolbar() {
+   /* private void initToolbar() {
         Toolbar toolbarBottom = (Toolbar) findViewById(R.id.menuToolbar);
         toolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
+                switch(item.getItemId()){
                     case R.id.action_main:
+                        Intent main = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(main);
                         break;
                     case R.id.action_carte:
-                        Intent carte = new Intent(MainActivity.this, Map.class);
-                        startActivity(carte);
                         break;
                     case R.id.action_addPoi:
                         Intent addPoi = new Intent(MainActivity.this, AddPoi.class);
@@ -70,13 +76,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             }
         });
         // Inflate a menu to be displayed in the toolbar
-        toolbarBottom.inflateMenu(R.menu.menumain_rotated);
+        toolbarBottom.inflateMenu(R.menu.menumain);
     }*/
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //initToolbar();
         startLocationUpdates();
@@ -85,6 +93,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         final ArchitectStartupConfiguration config = new ArchitectStartupConfiguration();
         config.setLicenseKey("qUIw0+pdPPdRCkiRQHP8D4MLzWLGKoRFvCJE35SWZCgFMBemyBPa37BR4+49RNEyvuLRbSfeKlnK3YrP7j7sn9MWJ05q7EkbEYN3qP/U4xfMEBVdJBISInyGIxT8Ae0UxP5+9DvFrcr72LQaIBdtKLiyGltzN10jpPwUAxnpBgRTYWx0ZWRfX4xyO6M1s963493Goe0b5Em0CAO7NaezKXkMHzHXtK5KWowpUMSOhZf7RB2EadnZ8cdxNfqZLoWBdTFkCGbezyd26YT8FPJ7a6ZWSVy/COYWQVvkArogVOEuRvAJEe6Svpwk9XMMMgeeYZUnLl1ykedCTkCEP8KkiuLla/8r+Y6KWU8EB/WL09DGaK863qnjtBjvtBMvRfnan1KP1Rea92icdrbtU6YoOJmtp3nc2Nc3kr4hSkIhReC3+KxXL+0FEku2y5O9YMYjF/UOnmR+e6hl1oxwwIpUHjjUm+hjUEegvOdmFRjxk09RdJhYkWeE8tMkE1pGFL+ZEVxbiFTU2+QI2zAUcp+exHFRa+L3anjpI0SPFfkfzX+w4hAJNGTiAQtdO6SreHhGUJaILdBNEuJCmVgT7MbT+2JuE44IsXXKR98dYUZLJYFxFwNXRszbrs5ay0i55CYIpAedYsy1rV3mKTTb3HPq8HvCz+P2Qs8G3YZUqduHfrtW2jKrKcUyLcqgT1Hi7gjiWkRu9yBdXQmKKYMJutOPxw==");
         this.architectView.onCreate(config);
+        detector = new GestureDetectorCompat(this.architectView.getContext(), this);
+
+
+
+    }
+
+    private boolean onTouchEvent() {
+        System.out.println("OnTouchEvent fired");
+        return true;
     }
 
 
@@ -248,4 +265,46 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
          //String msg = format(getResources().getString(R.string.provider_disabled), provider);
          //Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public boolean onDown(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        Intent receiverInputIntent = new Intent(this.architectView.getContext(), ReceiverActivity.class);
+        startActivity(receiverInputIntent);
+        return true;
+    }
+
+    @Override
+    public boolean onTouchEvent (MotionEvent event) {
+        detector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+
+
+
 }

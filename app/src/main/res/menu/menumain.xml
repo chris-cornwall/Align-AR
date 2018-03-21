@@ -9,6 +9,7 @@
         app:showAsAction="always"
         android:title="@string/main"
         android:icon="@drawable/ic_main"
+        android:layout_gravity="center"
         />
 
     <item
@@ -17,6 +18,7 @@
         app:showAsAction="always"
         android:title="@string/carte"
         android:icon="@drawable/ic_map"
+        android:layout_gravity="center"
         />
 
     <item
@@ -25,6 +27,7 @@
         app:showAsAction="always"
         android:title="@string/addPoi"
         android:icon="@drawable/ic_addpoi"
+        android:layout_gravity="center"
         />
 
     <item
@@ -33,6 +36,7 @@
         app:showAsAction="always"
         android:title="@string/galerie"
         android:icon="@drawable/ic_galerie"
+        android:layout_gravity="center"
         />
 
     <item
@@ -41,6 +45,7 @@
         app:showAsAction="always"
         android:title="@string/agenda"
         android:icon="@drawable/ic_calendar"
+        android:layout_gravity="center"
         />
 
 </menu>

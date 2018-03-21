@@ -48,3 +48,9 @@ function Signal(poiData, distance) {
 
    return properties;
  }
+
+ function getSigData(){
+ var Rpower=document.getElementById('Rpower').value;
+ var Rfrequency=document.getElementById('Rfrequency').value;
+console.log("Got from Form: " + Rpower + Rfrequency);
+ }
