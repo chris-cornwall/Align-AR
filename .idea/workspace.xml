@@ -25,107 +25,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00dc2e5f-12b9-486e-9009-6e960459e68d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.slidereveal.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-03-00-835.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-03-00-835.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-04-50-154.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-04-50-154.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-10-53-241.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-10-53-241.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-14-07-832.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-02-14-07-832.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-18-47-08-710.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-18-47-08-710.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-18-47-36-175.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-18-47-36-175.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-26-44-880.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-26-44-880.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-28-35-345.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-28-35-345.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-30-46-936.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-30-46-936.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-33-55-030.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-33-55-030.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-40-19-146.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-40-19-146.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-42-55-926.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-42-55-926.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-46-45-647.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-10-21-46-45-647.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-20-00-790.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-20-00-790.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-23-36-236.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-23-36-236.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-33-57-213.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-33-57-213.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-36-16-014.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-36-16-014.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-39-17-528.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-39-17-528.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-41-49-430.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-41-49-430.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-42-40-639.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-42-40-639.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-48-58-331.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-48-58-331.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-52-08-931.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-52-08-931.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-54-08-394.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-54-08-394.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-55-10-996.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-55-10-996.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-58-11-028.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-58-11-028.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-58-58-914.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-01-58-58-914.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-04-18-023.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-04-18-023.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-05-53-403.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-05-53-403.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-07-24-415.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-07-24-415.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-12-23-970.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-12-23-970.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-13-42-869.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-13-42-869.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-14-56-779.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-14-56-779.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-19-31-595.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-19-31-595.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-20-44-021.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-20-44-021.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-27-11-819.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-27-11-819.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-29-35-153.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-29-35-153.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-32-59-892.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-32-59-892.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-34-43-758.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-34-43-758.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-36-25-115.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-36-25-115.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-40-55-391.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-40-55-391.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-41-48-687.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-12-02-41-48-687.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-16-47-20-741.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-16-47-20-741.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-16-48-00-626.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-16-48-00-626.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-17-22-02-151.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-17-22-02-151.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-17-25-57-393.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-13-17-25-57-393.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-14-36-26-580.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-14-36-26-580.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-14-36-59-460.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-14-36-59-460.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-15-24-22-108.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-15-24-22-108.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-15-25-13-115.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-15-25-13-115.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-15-26-47-442.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-15-15-26-47-442.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-17-58-15-367.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-17-58-15-367.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-17-59-06-687.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-17-59-06-687.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-00-53-777.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-00-53-777.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-03-32-926.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-03-32-926.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-06-57-338.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-06-57-338.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-09-28-907.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-09-28-907.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-11-19-689.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-11-19-689.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-14-10-350.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-14-10-350.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-15-15-182.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-15-15-182.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-23-40-132.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-23-40-132.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-28-10-770.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-28-10-770.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-54-00-055.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-54-00-055.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-56-16-218.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2018-03-21-18-56-16-218.rawproto" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/assets/indi.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/assets/indi.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/assets/marker_idle.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/assets/marker_idle.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/assets/marker_idle1.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/assets/marker_idle1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/assets/marker_selected.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/assets/marker_selected.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/assets/radar_bg.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/assets/radar_bg.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/assets/radar_north.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/assets/radar_north.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/css/poi-radar.css" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/css/poi-radar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/index.html" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/ajax-loader.gif" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/images/ajax-loader.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-18-black.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/images/icons-18-black.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-18-white.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/images/icons-18-white.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-36-black.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/images/icons-36-black.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-36-white.png" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/images/icons-36-white.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery-1.9.1.min.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/jquery-1.9.1.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery-mobile-transparent-ui-overlay.css" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/jquery-mobile-transparent-ui-overlay.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.css" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.slidereveal.min.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/jquery/jquery.slidereveal.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/marker.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/marker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/nativedetailscreen.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/radar.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/radar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/signal.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/signal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
@@ -135,14 +82,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/index.html" afterPath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js" afterPath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/signal.js" afterPath="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/signal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_receiver.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_receiver.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menumain.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menumain.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -204,74 +144,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/index.html">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="147" column="73" lean-forward="false" selection-start-line="147" selection-start-column="73" selection-end-line="147" selection-end-column="73" />
-              <folding>
-                <element signature="e#4978#5011#0" expanded="true" />
-                <element signature="e#6362#6395#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="21">
+              <caret line="114" column="66" lean-forward="false" selection-start-line="114" selection-start-column="66" selection-end-line="114" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="56" column="50" lean-forward="false" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="marker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/marker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="99" column="37" lean-forward="false" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nativedetailscreen.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/nativedetailscreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="201" column="29" lean-forward="false" selection-start-line="201" selection-start-column="29" selection-end-line="201" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="signal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/signal.js">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/signal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nativedetailscreen.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="316" column="53" lean-forward="false" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.slidereveal.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.slidereveal.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="70" lean-forward="false" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.mobile-1.3.2.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.mobile-1.3.2.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-1.9.1.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery-1.9.1.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-63">
+              <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -301,36 +218,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updatep</find>
-      <find>updatela</find>
-      <find>upd</find>
-      <find>update</find>
-      <find>updatel</find>
-      <find>updatelay</find>
-      <find>updatelayou</find>
-      <find>updatelayout</find>
-      <find>pa</find>
-      <find>panel_dista</find>
-      <find>panel_distance</find>
-      <find>panel_distanc</find>
-      <find>panel_distan</find>
-      <find>panel_d</find>
-      <find>panel_</find>
-      <find>panel</find>
-      <find>panel-distance</find>
-      <find>panel-distanc</find>
-      <find>panel-distan</find>
-      <find>panel-dista</find>
-      <find>panel-dist</find>
-      <find>panel-dis</find>
-      <find>panel-d</find>
-      <find>panel-</find>
-      <find>panel-me</find>
-      <find>panel-men</find>
-      <find>panel-menu</find>
-      <find>inside</find>
-      <find>handlePanelMovements</find>
+      <find>World.reloadPlac</find>
+      <find>World.reloadPlace</find>
+      <find>World.reloadPlaces</find>
+      <find>S</find>
+      <find>Signal</find>
+      <find>click</find>
+      <find>s</find>
+      <find>si</find>
+      <find>signa</find>
       <find>signal</find>
+      <find>menu</find>
+      <find>receiver</find>
+      <find>power</find>
+      <find>rxRecGain</find>
+      <find>rec</find>
+      <find>recGain</find>
+      <find>marker</find>
+      <find>select</find>
+      <find>dest</find>
+      <find>destroy</find>
+      <find>destroyA</find>
+      <find>destroyAl</find>
+      <find>destroyAll</find>
+      <find>setD</find>
+      <find>hideIdleDra</find>
+      <find>deleteMarkers</find>
+      <find>radar</find>
+      <find>onscreenclick</find>
+      <find>reload</find>
+      <find>onscre</find>
     </findStrings>
     <replaceStrings>
       <replace>com.antenna_alignment.nuig</replace>
@@ -2084,13 +2001,17 @@
         <option value="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/marker.js" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_receiver.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menumain.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js" />
         <option value="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/signal.js" />
         <option value="$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/index.html" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/index.html" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/signal.js" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/marker.js" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/nativedetailscreen.js" />
       </list>
     </option>
   </component>
@@ -2098,7 +2019,7 @@
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1839" />
-    <option name="height" value="1098" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -2116,7 +2037,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2157,7 +2079,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="08_BrowsingPois_5_NativeDetailScreen" />
+              <option name="myItemId" value="AlignAR_NativeDetailScreen" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2175,40 +2097,16 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="08_BrowsingPois_5_NativeDetailScreen" />
+              <option name="myItemId" value="AlignAR_NativeDetailScreen" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FYP" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="08_BrowsingPois_5_NativeDetailScreen" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2563,13 +2461,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="sync.plugin.last.upgrade.timestamp" value="1519159069170" />
     <property name="device.picker.selection" value="16b640a1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="gradle.compiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
     <property name="DEBUGGABLE_DEVICE" value="zte-zte_b2017g-16b640a1" />
     <property name="DEBUGGABLE_PROCESS" value="com.antenna_alignment.nuig" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -2668,7 +2567,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521659133813" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522093192890" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2715,7 +2614,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521659133813" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522093192891" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2896,9 +2795,7 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521659133813" />
-      </method>
+      <method />
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
@@ -2930,31 +2827,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1839" height="1098" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1839" height="1092" extended-state="0" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22945571" sideWeight="0.16431394" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22945571" sideWeight="0.835686" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18356457" sideWeight="0.40937322" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24957556" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.49802372" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24390244" sideWeight="0.4935065" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.359491" sideWeight="0.14003389" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49776787" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.359491" sideWeight="0.8599661" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867885" sideWeight="0.49580574" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10107284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276414" sideWeight="0.4935065" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24957556" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.49802372" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2977,38 +2874,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-18-white.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-36-black.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-36-white.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/cmil3/ar/projetar/BuildConfig.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-18-black.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/ajax-loader.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/icons-18-black.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/images/ajax-loader.gif" />
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/location/LocationListener.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -3073,20 +2946,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/css/poi-radar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery-mobile-transparent-ui-overlay.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/css/poi-radar.css" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery-mobile-transparent-ui-overlay.css" />
     <entry file="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -3098,7 +2959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3106,9 +2966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding>
-            <marker date="1521127424845" expanded="true" signature="705:1878" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3119,20 +2976,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/radar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/marker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="135" column="42" lean-forward="false" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/radar.js" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/marker.js" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/ReceiverActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -3236,13 +3081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="78" column="51" lean-forward="false" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menumain_rotated.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3257,7 +3095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3268,7 +3105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3296,62 +3132,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.css">
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.css" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.js" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.slidereveal.min.js" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery-1.9.1.min.js" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/signal.js" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/signal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-63">
+          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.mobile-1.3.2.min.js">
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/marker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="219">
+          <caret line="99" column="37" lean-forward="false" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery.slidereveal.min.js">
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="70" lean-forward="false" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
+        <state relative-caret-position="209">
+          <caret line="56" column="50" lean-forward="false" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/jquery/jquery-1.9.1.min.js">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="21">
+          <caret line="114" column="66" lean-forward="false" selection-start-line="114" selection-start-column="66" selection-end-line="114" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js">
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/nativedetailscreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="316" column="53" lean-forward="false" selection-start-line="316" selection-start-column="53" selection-end-line="316" selection-end-column="53" />
+        <state relative-caret-position="240">
+          <caret line="201" column="29" lean-forward="false" selection-start-line="201" selection-start-column="29" selection-end-line="201" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/js/signal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/08_BrowsingPois_5_NativeDetailScreen/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="147" column="73" lean-forward="false" selection-start-line="147" selection-start-column="73" selection-end-line="147" selection-end-column="73" />
-          <folding>
-            <element signature="e#4978#5011#0" expanded="true" />
-            <element signature="e#6362#6395#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

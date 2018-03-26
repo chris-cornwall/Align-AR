@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         architectView.onPostCreate();
 
         try {
-            this.architectView.load("file:///android_asset/08_BrowsingPois_5_NativeDetailScreen/index.html");
+            this.architectView.load("file:///android_asset/AlignAR_NativeDetailScreen/index.html");
             architectView.setLocation(latitude, longitude, altitude, accuracy);
         } catch (Exception e) {
             System.out.println("Erreur du chargement de l'asset Wikitude");
