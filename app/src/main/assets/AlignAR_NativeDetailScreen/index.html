@@ -3,6 +3,13 @@
 <html>
 
     <head>
+        <!--Need to put this in css as appose to here...-->
+        <style>
+           #map {
+                height: 500px;
+                width: 100%;
+                }
+        </style>
     
     <!--  basic meta information -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -34,13 +41,20 @@
         <!-- World logic-->
         <script type="text/javascript" src="js/nativedetailscreen.js"></script>
 
+
+
+
     <!-- marker representation-->
     <script src="js/marker.js"></script>
 
 
-
     <!-- radar component -->
     <script type="text/javascript" src="js/radar.js"></script>
+
+        <script async defer type= "text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzgdfuNBRvi28jbwiVCs2f8SsK3aquNBQ&callback=initMap">
+        </script>
+
 </head>
 
     <body>
@@ -52,8 +66,8 @@
             <!-- MAIN PAGE CONTENT -->
          <!-- header of UI holding feature buttons -->
          <div id ="header-status" data-role="header" data-position="fixed" data-theme="f">
-             <a href="javascript: World.showRange();" data-icon="gear" data-inline="true" data-mini="true" data-theme="c">Preferences</a>
-             <a href="javascript: World.showMenu();" data-icon="location" data-inline="true" data-mini="true" data-theme="c">Menu</a>
+             <a href="javascript: World.showRange();" data-icon="gear" data-inline="true" data-mini="true" data-theme="c" >Configuration</a>
+             <a href="javascript: World.showMenu(); initMapMarkers()" data-icon="grid" data-inline="true" data-mini="true" data-theme="c">Map View</a>
             <!-- <a href="javascript: World.reloadPlaces()" data-icon="refresh" data-theme="c" >Reload</a> -->
              <h1></h1>
          </div>
@@ -107,7 +121,10 @@
                      <h4>Azimuth: <a id="poi-detail-azimuth"></a></h4>
 
                      <!-- power -->
-                     <h4>Power: <a id="poi-detail-strength"></a></h4>
+                     <h4>Estimated Power: <a id="poi-detail-strength"></a></h4>
+
+                     <!-- angle -->
+                     <h4>Suggested Angle: <a id="poi-detail-angle"></a></h4>
 
                      <!-- gain -->
                      <h4>Gain:  <a id="poi-detail-gain"></a></h4>
@@ -123,17 +140,17 @@
 
 
             <!-- range panel -->
-            <div data-role="panel" id="panel-distance" data-position="left" data-display="overlay" style="background-color:#F0F0F0;" data-theme="c">
+            <div data-role="panel" id="panel-distance" data-position="left" data-display="overlay" style="background-color:rgba(240, 240, 240, 0.8);" data-theme="c">
 
                     <!-- header with close button -->
                     <div data-role="header" data-theme="c">
-                        <h1>Preferences</h1>
+                        <h1>Configuration</h1>
                         <a href="#header" data-rel="close">Close</a>
                     </div>
 
                     <!-- distance info  -->
                     <div data-role="content">
-
+                        <h3> View Preferences</h3>
                         <!-- Distance in m/km-->
                         <h4> Distance: <a id="panel-distance-value"></a></h4>
 
@@ -148,35 +165,22 @@
                             <input type="text" name="rGain" placeholder="Receiver Gain">
                             <input type="text" name="rConLoss" placeholder="Connection Loss">
                             <input type="text" name="rCableLoss" placeholder="Cable Loss">
-                            <input href="#header" data-rel="close" type="submit" onclick="window.location='#header';getRecData();World.reloadPlaces()" value="Submit">
+                            <input href="#header" data-rel="close" type="submit" onclick="window.location='#header';setRecData();World.reloadPlaces()" value="Submit">
                         </form>
                     </div>
             </div>
 
 
 
-         <div data-role="panel" id="panel-menu" data-position="right" data-display="overlay" style="background-color:#F0F0F0;" data-theme="c">
+         <div data-role="panel" id="panel-menu" data-position="right" data-display="overlay" style="background-color:rgba(240, 240, 240, 0.8); width:100%" data-theme="c">
 
              <!-- header with close button -->
              <div data-role="header" data-theme="c">
-                 <h1>Preferences</h1>
+                 <h1>Map View</h1>
                  <a href="#header" data-rel="close">Close</a>
              </div>
+                 <div id="map"></div>
 
-             <!-- distance info  -->
-             <div data-role="content">
-
-                 <!-- Distance in m/km-->
-                 <h4> Distance: <a id="panel-distance-value"></a></h4>
-
-                 <!-- Amount of visible places -->
-                 <h4> Visible: <a id="panel-distance-places"></a></h4>
-
-                 <!-- default slider -->
-                 <input id="panel-distance-range" type="range" data-highlight="true" name="rangeSlider" min="0" max="100" value="100" data-show-value="false" step="5" data-popup-enabled="false">
-
-                 <a href="javascript: World.reloadPlaces()" data-icon="refresh" data-theme="c" >Reload</a>
-             </div>
          </div>
 
         </div>

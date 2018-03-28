@@ -1,9 +1,31 @@
-<!DOCTYPE = HTML>
+<!DOCTYPE html>
 <html>
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBzgdfuNBRvi28jbwiVCs2f8SsK3aquNBQ"></script>
+<head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+<body>
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
 <script>
-<!--libraries=geometry&sensor=false?-->
-console.log("HOW ARE THAAANNNGGGS");
-
+      function initMap() {
+        var uluru = {lat: 53.292638, lng: -9.111311};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzgdfuNBRvi28jbwiVCs2f8SsK3aquNBQ&callback=initMap">
 </script>
+</body>
 </html>

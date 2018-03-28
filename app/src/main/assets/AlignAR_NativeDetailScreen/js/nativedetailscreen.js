@@ -6,7 +6,8 @@ var ServerInformation = {
 	POIDATA_SERVER_ARG_NR_POIS: "nrPois"
 };
 
-
+// holds google map
+var map;
 // implementation of AR-Experience (aka "World")
 var World = {
 
@@ -51,6 +52,7 @@ var World = {
 		// start loading marker assets
 		World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle1.png");
 		World.markerDrawable_selected = new AR.ImageResource("assets/marker_selected.png");
+		World.markerDrawable_idle_green = new AR.ImageResource("assets/marker_idle_green.png");
 		World.markerDrawable_directionIndicator = new AR.ImageResource("assets/indi.png");
 
 		// loop through POI-information and create an AR.GeoObject (=Marker) per POI
@@ -72,13 +74,12 @@ var World = {
 			World.markerList.push(new Marker(singlePoi));
 		}
 
-
-
 		// updates distance information of all placemarks
 		World.updateDistanceToUserValues();
 
 		World.updateStatusMessage(currentPlaceNr + ' Antennas Loaded');
 
+        World.markerList.forEach(marker => filterMarkers(marker));
 
 		// set distance slider to 100%
 		$("#panel-distance-range").val(100);
@@ -114,7 +115,7 @@ var World = {
 	*/
 	// user clicked "More" button in POI-detail panel -> fire event to open native screen
 	onPoiDetailMoreButtonClicked: function onPoiDetailMoreButtonClickedFn() {
-	    console.log("MORE BUTTON CLICKED");
+	   // console.log("MORE BUTTON CLICKED");
 		var currentMarker = World.currentMarker;
 		var architectSdkUrl = "architectsdk://markerselected?id=" + encodeURIComponent(currentMarker.poiData.id) + "&title=" + encodeURIComponent(currentMarker.poiData.title) + "&description=" + encodeURIComponent(currentMarker.poiData.description);
 		/*
@@ -184,6 +185,7 @@ var World = {
 //		console.log("Signal: " + signal['signal']);
 		//TODO: Need to make units smarter...
 		$("#poi-detail-strength").html((signal['snr'].toFixed(3)) + " dB");
+		$("#poi-detail-angle").html((signal['angle'].toFixed(3)) + "°");
 
 
 		// show panel
@@ -194,12 +196,13 @@ var World = {
 		$("#panel-poidetail").on("panelbeforeclose", function(event, ui) {
 			World.currentMarker.setDeselected(World.currentMarker);
 		});
-		 deleteMarkers(marker);
+		 hideMarkers(marker);
 	},
 
 	// screen was clicked but no geo-object was hit
 	onScreenClick: function onScreenClickFn() {
 	    World.reloadPlaces();
+	    //categorizeMarkers();
 		// you may handle clicks on empty AR space too
 	},
 
@@ -365,22 +368,80 @@ var World = {
 
 // TODO: Change...
 // Remove other markers from screen when one is selected
-function deleteMarkers(Marker) {
+function hideMarkers(Marker) {
   for (var i=0; i<World.markerList.length; i++){
             if (World.markerList[i].poiData.id != Marker.poiData.id){
-            console.log("Marker not selected");
-            console.log("ID: " + World.markerList[i].poiData.id);
-            console.log("ID: " + Marker.poiData.id);
-            World.markerList[i].setIdleDeselected(World.markerList[i]);
-
-
-               /* World.markerList.splice(i,1);*/
-               // AR.context.destroyAll();
-
+                World.markerList[i].setIdleDeselected(World.markerList[i]);
             }
       }
 
 }
+
+
+
+// Check if two markers belong to the same mast, if so, filter them using their azimuth and users location
+function filterMarkers(Marker) {
+  var userData = World.userLocation;
+  for (var i=0; i<World.markerList.length; i++){
+
+                if (World.markerList[i].poiData.longitude == Marker.poiData.longitude &&
+                    World.markerList[i].poiData.latitude == Marker.poiData.latitude &&
+                    World.markerList[i].poiData.id != Marker.poiData.id){
+
+                         var oldMarkerCoord = findCoord(Marker.poiData, Marker.distanceToUser);
+                         var newMarkerCoord = findCoord(World.markerList[i].poiData, World.markerList[i].distanceToUser);
+
+                         if (calcDist(oldMarkerCoord.latitude, oldMarkerCoord.longitude, userData) >=
+                             calcDist(newMarkerCoord.latitude, newMarkerCoord.longitude, userData)){
+                                console.log("Going to remove marker: " + World.markerList[i].poiData.id);
+                                World.markerList[i].setIdleDeselected(World.markerList[i])
+                             }
+                         else{
+                            Marker.setIdleDeselected(Marker);
+                         }
+
+                    }
+
+                }
+
+}
+function categorizeMarkers(){
+  for (var i=0; i<World.markerList.length; i++){
+      if (World.markerList[i].poiData.power >= 5){
+          World.markerList[i].setIdleGreen(World.markerList[i]);
+         }
+      }
+}
+
+
+function initMap() {
+      console.log("INSIDE INIT MAP FUNCTION");
+        var userData = World.userLocation;
+        var userLoc = {lat: userData.latitude, lng: userData.longitude};
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: userLoc,
+          mapTypeId: 'terrain'
+        });
+        map.setTilt(100);
+
+      }
+
+function initMapMarkers(){
+
+       for (var i = 0; i < World.markerList.length; i++) {
+                        console.log("ID:" + World.markerList[i].poiData.id);
+                        var markerData = World.markerList[i].poiData;
+                        var markerLoc = {lat: markerData.latitude, lng: markerData.longitude};
+                        var marker = new google.maps.Marker({
+                          position: markerLoc,
+                          map: map
+                        });
+                        marker.setMap(map);
+                      }
+}
+
+
 
 /* forward locationChanges to custom function */
 AR.context.onLocationChanged = World.locationChanged;
