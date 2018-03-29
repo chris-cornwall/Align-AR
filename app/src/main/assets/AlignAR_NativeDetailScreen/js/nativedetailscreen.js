@@ -378,7 +378,6 @@ function hideMarkers(Marker) {
 }
 
 
-
 // Check if two markers belong to the same mast, if so, filter them using their azimuth and users location
 function filterMarkers(Marker) {
   var userData = World.userLocation;

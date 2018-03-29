@@ -96,7 +96,7 @@ function getAngle(poiData, distance){
     var B = distance;
     console.log("Distance (b): " + B);
 
-    var angle = Math.acos(A/B).toDeg();
+    var angle = Math.asin(A/B).toDeg();
     console.log("Suggested angle: " + angle);
     return angle;
  }
@@ -137,7 +137,7 @@ function findCoord(poiData, distance){
         "latitude": newLatitude.toDeg(),
         "longitude": newLongitude.toDeg()
         };
-    //return [newLongitude.toDeg(), newLatitude.toDeg()]; //[lon, lat]
+
     return coords;
 }
 

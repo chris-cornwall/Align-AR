@@ -44,43 +44,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
     private GestureDetectorCompat detector;
 
-
-    //initiate tool bar with buttons and actions
-   /* private void initToolbar() {
-        Toolbar toolbarBottom = (Toolbar) findViewById(R.id.menuToolbar);
-        toolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.action_main:
-                        Intent main = new Intent(MainActivity.this, MainActivity.class);
-                        startActivity(main);
-                        break;
-                    case R.id.action_carte:
-                        break;
-                    case R.id.action_addPoi:
-                        Intent addPoi = new Intent(MainActivity.this, AddPoi.class);
-                        startActivity(addPoi);
-                        break;
-                    case R.id.action_galerie:
-                        Uri gal = Uri.parse("http://www.lirmm.fr/campusar/galerie/");
-                        Intent intent_gal = new Intent(Intent.ACTION_VIEW, gal);
-                        startActivity(intent_gal);
-                        break;
-                    case R.id.action_calendar:
-                        Intent calen = new Intent(MainActivity.this, Calendar.class);
-                        startActivity(calen);
-                        break;
-                }
-                return true;
-            }
-        });
-        // Inflate a menu to be displayed in the toolbar
-        toolbarBottom.inflateMenu(R.menu.menumain);
-    }*/
-
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -115,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
             this.architectView.load("file:///android_asset/AlignAR_NativeDetailScreen/index.html");
             architectView.setLocation(latitude, longitude, altitude, accuracy);
         } catch (Exception e) {
-            System.out.println("Erreur du chargement de l'asset Wikitude");
+            System.out.println("Unable to load Wikitude");
         }
     }
 
