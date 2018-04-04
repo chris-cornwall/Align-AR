@@ -96,7 +96,7 @@
             <!-- PANELS, ONLY VISIBLE ON DEMAND -->
 
             <!-- panel containing POI detail information -->
-            <div data-role="panel" id="panel-poidetail" data-position="right" data-display="overlay" style="background-color:#F0F0F0;" data-theme="c">
+            <div data-role="panel" id="panel-poidetail" data-position="right" data-display="overlay" style="background-color:rgba(240, 240, 240, 0.8);" data-theme="c">
 
                 <!-- header with "close" button -->
                 <div data-role="header" data-theme="c">
@@ -162,9 +162,9 @@
                         <br>
                         <h3> Receiver Specifications</h3>
                         <form name="sigForm" onsubmit="console.log('Submit button pressed')" method="post">
-                            <input type="text" name="rGain" placeholder="Receiver Gain">
-                            <input type="text" name="rConLoss" placeholder="Connection Loss">
-                            <input type="text" name="rCableLoss" placeholder="Cable Loss">
+                            <input type="number" name="rGain" placeholder="Receiver Gain (dBi)">
+                            <input type="number" name="rConLoss" placeholder="Connection Loss (dB)">
+                            <input type="number" name="rCableLoss" placeholder="Cable Loss (dB)">
                             <input href="#header" data-rel="close" type="submit" onclick="window.location='#header';setRecData();World.reloadPlaces()" value="Submit">
                         </form>
                     </div>

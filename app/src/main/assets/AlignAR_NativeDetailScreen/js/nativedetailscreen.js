@@ -162,8 +162,8 @@ var World = {
 		// update panel values
 		$("#poi-detail-title").html(marker.poiData.title);
 		$("#poi-detail-description").html(marker.poiData.description);
-		$("#poi-detail-gain").html(marker.poiData.gain + "dBi");
-		$("#poi-detail-frequency").html(marker.poiData.frequency + "MHz");
+		$("#poi-detail-gain").html(marker.poiData.gain + " dBi");
+		$("#poi-detail-frequency").html(marker.poiData.frequency + " MHz");
 		$("#poi-detail-elevation").html((marker.poiData.elevation) + " m");
 		$("#poi-detail-azimuth").html(marker.poiData.azimuth + "°");
 

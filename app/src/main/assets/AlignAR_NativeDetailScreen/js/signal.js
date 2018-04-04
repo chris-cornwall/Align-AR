@@ -94,10 +94,11 @@ function getAngle(poiData, distance){
     }
 
     var B = distance;
-    console.log("Distance (b): " + B);
+//    console.log("Distance (b): " + B);
 
     var angle = Math.asin(A/B).toDeg();
-    console.log("Suggested angle: " + angle);
+//    console.log("Suggested angle before toDeg: " + Math.asin(A/B));
+//    console.log("Suggested angle: " + angle);
     return angle;
  }
 
@@ -110,7 +111,7 @@ function calcDist(tLat, tLong, userData){
 
         distance = Math.sqrt((x2-x1)^2 + (y2-y1)^2);
 
-    console.log("Distance between points = " + distance);
+//    console.log("Distance between points = " + distance);
     return distance;
 
 }
@@ -131,7 +132,7 @@ function findCoord(poiData, distance){
 
     newLongitude = (newLongitude+3*Math.PI) % (2*Math.PI) - Math.PI; // normalise to -180..+180°
 
-    console.log("Long: " + newLongitude.toDeg() + " Lat: " + newLatitude.toDeg());
+//    console.log("Long: " + newLongitude.toDeg() + " Lat: " + newLatitude.toDeg());
 
     var coords = {
         "latitude": newLatitude.toDeg(),
