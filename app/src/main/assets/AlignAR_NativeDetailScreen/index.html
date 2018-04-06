@@ -52,7 +52,7 @@
     <script type="text/javascript" src="js/radar.js"></script>
 
         <script async defer type= "text/javascript"
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzgdfuNBRvi28jbwiVCs2f8SsK3aquNBQ&callback=initMap">
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzgdfuNBRvi28jbwiVCs2f8SsK3aquNBQ">
         </script>
 
 </head>
@@ -67,7 +67,7 @@
          <!-- header of UI holding feature buttons -->
          <div id ="header-status" data-role="header" data-position="fixed" data-theme="f">
              <a href="javascript: World.showRange();" data-icon="gear" data-inline="true" data-mini="true" data-theme="c" >Configuration</a>
-             <a href="javascript: World.showMenu(); initMapMarkers()" data-icon="grid" data-inline="true" data-mini="true" data-theme="c">Map View</a>
+             <a href="javascript: World.showMenu(); initMap(); initMapMarkers()" data-icon="grid" data-inline="true" data-mini="true" data-theme="c">Map View</a>
             <!-- <a href="javascript: World.reloadPlaces()" data-icon="refresh" data-theme="c" >Reload</a> -->
              <h1></h1>
          </div>

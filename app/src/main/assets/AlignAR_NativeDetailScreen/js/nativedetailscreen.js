@@ -432,9 +432,13 @@ function initMapMarkers(){
                         console.log("ID:" + World.markerList[i].poiData.id);
                         var markerData = World.markerList[i].poiData;
                         var markerLoc = {lat: markerData.latitude, lng: markerData.longitude};
+                        var markerName = markerData.name;
+                        console.log("MARKERNAME: " +  markerData.title);
                         var marker = new google.maps.Marker({
                           position: markerLoc,
+                          label: markerData.title,
                           map: map
+
                         });
                         marker.setMap(map);
                       }

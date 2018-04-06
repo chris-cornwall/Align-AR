@@ -5,35 +5,49 @@ var rxConLoss = 0;
 // Function to calculate estimated Signal to noise ratio
 function Signal(poiData, distance) {
 
+    if (typeof parseInt(localStorage.getItem("rxRecGain")) == "number"){
+         rxRecGain = parseInt(localStorage.getItem("rxRecGain"));
+        console.log("rxRecGain from storage: " + localStorage.getItem("rxRecGain"));
+        }
+
+    if (typeof parseInt(localStorage.getItem("rxConLoss"))== "number"){
+             rxConLoss = localStorage.getItem("rxConLoss");
+            console.log("rxConLoss from storage: " + localStorage.getItem("rxConLoss"));
+            }
+
+    if (typeof parseInt(localStorage.getItem("rxCableLoss"))== "number"){
+            rxCableLoss = localStorage.getItem("rxCableLoss");
+            console.log("rxCableLoss from storage: " + localStorage.getItem("rxCableLoss"));
+            }
+
+            console.log("FINAL RESULT: \n" + rxRecGain + "\n" + rxConLoss + "\n" + rxCableLoss);
     var
-        poiData = poiData; //TODO: Change?
+        poiData = poiData;
         distance = distance;
-       // test = findCoord(poiData, distance);
         angle = getAngle(poiData, distance);
 
-    // Transmitter Frequency, power and gain all grabbed from input json
+        // Transmitter Frequency, power and gain all grabbed from input json
         frequency = poiData.frequency * 1000; // MHz
         tPower = poiData.power; // dBm
         tGain = poiData.gain; // dBi
         lightSpeed = 299792458; // m/s
         wavelength = lightSpeed/(frequency*1000000); // m
-   // console.log("wavelength: " + wavelength);
 
-    // Free space path loss
+
+        // Free space path loss
         fspl = 20*Math.log10((wavelength/(4*Math.PI*distance))); //dB
 
-    // Effective isotropic radiated power
+        // Effective isotropic radiated power
         eirp = tPower + tGain; //dBm
 
-    // Power at Receiver
+        // Power at Receiver
         powerAtRec = eirp + fspl; //dB
 
-    console.log("RECGAIN BEFORE CALC: " + rxRecGain);
 
+        // Plus gains and losses
         rxPowerFSPL = powerAtRec + rxRecGain + rxConLoss + rxCableLoss;
-    console.log("RXPowerFSPL: " + rxPowerFSPL);
-     console.log("RECGAIN AFTER CALC: " + rxRecGain);
-    // Noise at RX receiver
+
+        // Noise at RX receiver
         boltzConst = 1.38e-23; // J/K
         rxNoiseFig = 7; // dB ... NEED TO CHANGE... Read from server
         opTemp = 290; // K
@@ -42,13 +56,13 @@ function Signal(poiData, distance) {
         effectNoiseTemp = opTemp*(10^(rxNoiseFig/10)-1); //K
         rxNoisePower = 10*Math.log10(boltzConst*(antennaTemp+effectNoiseTemp)*(recBandwidth*1000000))+30;
         SNR = rxPowerFSPL - rxNoisePower;
-    console.log("SNR:" + SNR);
+
 
 
     properties = {
-    "rpower": powerAtRec,
-    "snr": SNR,
-    "angle": angle
+        "rpower": powerAtRec,
+        "snr": SNR,
+        "angle": angle
     };
 
    return properties;
@@ -56,20 +70,26 @@ function Signal(poiData, distance) {
 
  function setRecData(){
 
+    var rxRecGain = parseInt(document.forms["sigForm"]["rGain"].value);
+    var rxConLoss = parseInt(document.forms["sigForm"]["rConLoss"].value);
+    var rxCableLoss = parseInt(document.forms["sigForm"]["rCableLoss"].value);
     // Read receiver specs from user input
-    if(document.forms["sigForm"]["rGain"].value != null){
+    if(typeof rxRecGain == "number"){
         rxRecGain = parseInt(document.forms["sigForm"]["rGain"].value);
+        localStorage.setItem("rxRecGain", rxRecGain);
         console.log("Changing rGain to: " + rxRecGain);
       }
 
-    if(document.forms["sigForm"]["rConLoss"].value != null){
+   if(typeof rxConLoss == "number"){
         rxConLoss = parseInt(document.forms["sigForm"]["rConLoss"].value);
-        console.log("Changing rConLoss to: " + rxRecGain);
+        localStorage.setItem("rxConLoss", rxConLoss);
+        console.log("Changing rConLoss to: " + rxConLoss);
        }
 
-    if(document.forms["sigForm"]["rCableLoss"].value != null){
-        rxRecGain = parseInt(document.forms["sigForm"]["rCableLoss"].value);
-        console.log("Changing rCableLoss to: " + rxRecGain);
+    if(typeof rxCableLoss == "number"){
+        rxCableLoss = parseInt(document.forms["sigForm"]["rCableLoss"].value);
+        localStorage.setItem("rxCableLoss", rxCableLoss);
+        console.log("Changing rCableLoss to: " + rxCableLoss);
        }
 
  }
@@ -77,9 +97,9 @@ function Signal(poiData, distance) {
  // Calculate recommended angle using simple trigonometry
 function getAngle(poiData, distance){
     //TODO: Validate..
-    var antennaElevation = poiData.elevation;
+    var antennaElevation = parseInt(poiData.elevation);
     console.log("Antenna Elevation: " + antennaElevation);
-    var userElevation = World.userLocation.altitude;
+    var userElevation = parseInt(World.userLocation.altitude);
     console.log("User Elevation: " + userElevation);
 
     // In the unlikely event that the user is higher than the antenna, the markers will display this
@@ -94,12 +114,18 @@ function getAngle(poiData, distance){
     }
 
     var B = distance;
-//    console.log("Distance (b): " + B);
+    console.log("Distance (b): " + B);
 
     var angle = Math.asin(A/B).toDeg();
 //    console.log("Suggested angle before toDeg: " + Math.asin(A/B));
 //    console.log("Suggested angle: " + angle);
+    if (!isNaN(angle)){
     return angle;
+    }
+    else{
+    return "Unavailable";
+    }
+
  }
 
 function calcDist(tLat, tLong, userData){
