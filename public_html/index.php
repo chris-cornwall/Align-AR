@@ -7,13 +7,40 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         
         <meta name="google-signin-client_id" content="962339483613-qet1cck0p62fh7mi4lsgnj3r25r43s62.apps.googleusercontent.com">
+        
+        <link rel="stylesheet" type="text/css" href="index.css">
        
     </head>  
    <body onLoad = "signOut()">
-    <div class="g-signin2"
+    
+  <form>
+  <div class="imgcontainer">
+    <img src="images/logo.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="button">Login</button>
+      <div class="g-signin2"
          data-onsuccess="onSignIn"
          data-redirecturi="https://danu6.it.nuigalway.ie/ITChris">
     </div>
+      
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
        <div>
         <a href="#" onclick="signOut();">Sign out</a></div>
      
@@ -49,125 +76,3 @@
     </script>
   </body>  
 </html>  
-<script>  
-$(document).ready(function(){  
-    function fetch_data()  
-    {  
-        $.ajax({  
-            url:"select.php",  
-            method:"POST",  
-            success:function(data){  
-				$('#live_data').html(data);  
-            }  
-        });  
-    }  
-    fetch_data();  
-    $(document).on('click', '#btn_add', function(){  
-        var name = $('#name').text();  
-        var description = $('#description').text();  
-        var latitude = $('#latitude').text();  
-        var longitude = $('#longitude').text();  
-        var altitude = $('#altitude').text();  
-        var power = $('#power').text();  
-        var gain = $('#gain').text();  
-        var frequency = $('#frequency').text();  
-        var azimuth = $('#azimuth').text();  
-        if(name == '')  
-        {  
-            alert("Enter Antenna Name");  
-            return false;  
-        }  
-        if(description == '')  
-        {  
-            alert("Enter Antenna Description");  
-            return false;  
-        }  
-        $.ajax({  
-            url:"insert.php",  
-            method:"POST",  
-            data:{name:name, description:description, latitude:latitude, longitude:longitude, altitude:altitude, power:power, gain:gain, frequency:frequency, azimuth:azimuth},  
-            dataType:"text",  
-            success:function(data)  
-            {  
-                alert(data);  
-                fetch_data();  
-            }  
-        })  
-    });  
-    
-	function edit_data(id, text, column_name)  
-    {  
-        $.ajax({  
-            url:"edit.php",  
-            method:"POST",  
-            data:{id:id, text:text, column_name:column_name},  
-            dataType:"text",  
-            success:function(data){  
-                //alert(data);
-				$('#result').html("<div class='alert alert-success'>"+data+"</div>");
-            }  
-        });  
-    }  
-    $(document).on('blur', '.name', function(){  
-        var id = $(this).data("id1");  
-        var name = $(this).text();  
-        edit_data(id, name, "name");  
-    });  
-    $(document).on('blur', '.description', function(){  
-        var id = $(this).data("id2");  
-        var description = $(this).text();  
-        edit_data(id, description, "description");  
-    });  
-      $(document).on('blur', '.latitude', function(){  
-        var id = $(this).data("id3");  
-        var latitude = $(this).text();  
-        edit_data(id, latitude, "latitude");  
-    });  
-      $(document).on('blur', '.longitude', function(){  
-        var id = $(this).data("id4");  
-        var longitude = $(this).text();  
-        edit_data(id, longitude, "longitude");  
-    });  
-      $(document).on('blur', '.altitude', function(){  
-        var id = $(this).data("id5");  
-        var altitude = $(this).text();  
-        edit_data(id, altitude, "altitude");  
-    });  
-      $(document).on('blur', '.power', function(){  
-        var id = $(this).data("id6");  
-        var power = $(this).text();  
-        edit_data(id, power, "power");  
-    });  
-      $(document).on('blur', '.gain', function(){  
-        var id = $(this).data("id7");  
-        var gain = $(this).text();  
-        edit_data(id, gain, "gain");  
-    });  
-      $(document).on('blur', '.frequency', function(){  
-        var id = $(this).data("id8");  
-        var frequency = $(this).text();  
-        edit_data(id, frequency, "frequency");  
-    });  
-      $(document).on('blur', '.azimuth', function(){  
-        var id = $(this).data("id9");  
-        var azimuth = $(this).text();  
-        edit_data(id, azimuth, "azimuth");  
-    });  
-    $(document).on('click', '.btn_delete', function(){  
-        var id=$(this).data("id10");  
-        if(confirm("Are you sure you want to delete this?"))  
-        {  
-            $.ajax({  
-                url:"delete.php",  
-                method:"POST",  
-                data:{id:id},  
-                dataType:"text",  
-                success:function(data){  
-                    alert(data);  
-                    fetch_data();  
-                }  
-            });  
-        }  
-    });  
-});  
-</script>
