@@ -9,7 +9,7 @@
         <script src="https://apis.google.com/js/api.js"></script>
         
         <meta name="google-signin-client_id" content="962339483613-qet1cck0p62fh7mi4lsgnj3r25r43s62.apps.googleusercontent.com">
-        <div> <a href="#" onclick="sign_out();">Sign out</a></div>
+        <div> <a href="logout.php" onclick="sign_out();">Sign out</a></div>
         <div> <a href="#" onclick="validate_user();">Validate User</a></div>
         
        

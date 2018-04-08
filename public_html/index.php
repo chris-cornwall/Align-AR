@@ -13,19 +13,19 @@
     </head>  
    <body onLoad = "signOut()">
     
-  <form>
+  <form action="/ITChris/login.php" method="post">
   <div class="imgcontainer">
     <img src="images/logo.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
     <label for="uname"></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="name" required>
 
     <label for="psw"></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
-    <button type="button">Login</button>
+    <button type="submit" value="Submit">Login</button>
       <div class="g-signin2"
          data-onsuccess="onSignIn"
          data-redirecturi="https://danu6.it.nuigalway.ie/ITChris">
