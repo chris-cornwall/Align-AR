@@ -22,6 +22,8 @@ var World = {
 
 	// different POI-Marker assets
 	markerDrawable_idle: null,
+	markerDrawable_idle_green: null,
+	markerDrawable_idle_orange: null,
 	markerDrawable_selected: null,
 	markerDrawable_directionIndicator: null,
 
@@ -53,6 +55,7 @@ var World = {
 		World.markerDrawable_idle = new AR.ImageResource("assets/marker_idle1.png");
 		World.markerDrawable_selected = new AR.ImageResource("assets/marker_selected.png");
 		World.markerDrawable_idle_green = new AR.ImageResource("assets/marker_idle_green.png");
+		World.markerDrawable_idle_orange = new AR.ImageResource("assets/marker_idle_orange.png");
 		World.markerDrawable_directionIndicator = new AR.ImageResource("assets/indi.png");
 
 		// loop through POI-information and create an AR.GeoObject (=Marker) per POI
@@ -200,9 +203,10 @@ var World = {
 	},
 
 	// screen was clicked but no geo-object was hit
-	onScreenClick: function onScreenClickFn() {
-	    World.reloadPlaces();
-	    //categorizeMarkers();
+	onScreenClick: async function onScreenClickFn() {
+
+	    await World.reloadPlaces();
+	    categorizeMarkers();
 		// you may handle clicks on empty AR space too
 	},
 
@@ -406,10 +410,15 @@ function filterMarkers(Marker) {
 }
 function categorizeMarkers(){
   for (var i=0; i<World.markerList.length; i++){
-      if (World.markerList[i].poiData.power >= 5){
+  	var signal = new Signal(World.markerList[i].poiData, World.markerList[i].distanceToUser);
+    var signalStrength  = parseFloat(signal['snr']);
+    if (signalStrength >= 20){
           World.markerList[i].setIdleGreen(World.markerList[i]);
-         }
-      }
+        }
+    if (signalStrength >= 10 && signalStrength < 20){
+          World.markerList[i].setIdleOrange(World.markerList[i]);
+    }
+  }
 }
 
 
