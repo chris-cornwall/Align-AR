@@ -204,7 +204,7 @@ var World = {
 
 	// screen was clicked but no geo-object was hit
 	onScreenClick: async function onScreenClickFn() {
-
+    // TODO: TRY CATCH
 	    await World.reloadPlaces();
 	    categorizeMarkers();
 		// you may handle clicks on empty AR space too

@@ -26,6 +26,8 @@ import com.google.android.gms.location.*;
 import com.wikitude.architect.ArchitectStartupConfiguration;
 import com.wikitude.architect.ArchitectView;
 
+import static android.location.Criteria.ACCURACY_FINE;
+import static android.os.Looper.*;
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 import static java.lang.String.*;
 
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
 
     private LocationRequest mLocationRequest;
 
-    private long UPDATE_INTERVAL = 10 * 1000;  /* 10 secs */
+    private long UPDATE_INTERVAL = 50000;  /* 10 secs */
     private long FASTEST_INTERVAL = 2000; /* 2 sec */
     private GestureDetectorCompat detector;
 
@@ -101,8 +103,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                 // for ActivityCompat#requestPermissions for more details.
                 return;
             }
-        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0, this);
-        lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 10000, 0, this);
+        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 0, this);
+        //lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 20000, 0, this);
+
 
         architectView.onResume();
     }
@@ -173,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                         onLocationChanged(locationResult.getLastLocation());
                     }
                 },
-                Looper.myLooper());
+                myLooper());
     }
 
     @Override
