@@ -16,36 +16,31 @@ function Marker(poiData) {
     // create the AR.GeoLocation from the poi data
     var markerLocation = new AR.GeoLocation(poiData.latitude, poiData.longitude, poiData.altitude);
     var altitude = markerLocation.altitude;
+/*
 
+More properties defined here
+
+*/
 
     //console.log("Altitude: " + altitude);
   // var markerLocation = new AR.GeoLocation(53.280290, -9.058741, 0);
 
-    // create an AR.ImageDrawable for the marker in idle state
+    // create an AR.ImageDrawable for the marker in each state
     this.markerDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
         zOrder: 0,
         opacity: 1.0,
-        /*
-            To react on user interaction, an onClick property can be set for each AR.Drawable. The property is a function which will be called each time the user taps on the drawable. The function called on each tap is returned from the following helper function defined in marker.js. The function returns a function which checks the selected state with the help of the variable isSelected and executes the appropriate function. The clicked marker is passed as an argument.
-        */
         onClick: Marker.prototype.getOnClickTrigger(this)
     });
 
     this.markerDrawable_idle_green = new AR.ImageDrawable(World.markerDrawable_idle_green, 2.5, {
             zOrder: 0,
             opacity: 1.0,
-            /*
-                To react on user interaction, an onClick property can be set for each AR.Drawable. The property is a function which will be called each time the user taps on the drawable. The function called on each tap is returned from the following helper function defined in marker.js. The function returns a function which checks the selected state with the help of the variable isSelected and executes the appropriate function. The clicked marker is passed as an argument.
-            */
             onClick: Marker.prototype.getOnClickTrigger(this)
         });
 
     this.markerDrawable_idle_orange = new AR.ImageDrawable(World.markerDrawable_idle_orange, 2.5, {
              zOrder: 0,
              opacity: 1.0,
-             /*
-                To react on user interaction, an onClick property can be set for each AR.Drawable. The property is a function which will be called each time the user taps on the drawable. The function called on each tap is returned from the following helper function defined in marker.js. The function returns a function which checks the selected state with the help of the variable isSelected and executes the appropriate function. The clicked marker is passed as an argument.
-             */
              onClick: Marker.prototype.getOnClickTrigger(this)
         });
 
@@ -436,16 +431,17 @@ Marker.prototype.setIdleOrange = function(marker) {
          marker.markerObject.drawables.radar = marker.radardrawables;
 
          if (marker.animationGroup_idle === null) {
+
+             // create AR.PropertyAnimation that animates the opacity to 1.0 in order to show the orange animation
+             var showOrangeAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle_orange, "opacity", null, 1.0, kMarker_AnimationDuration_ChangeDrawable);
+             // create AR.PropertyAnimation that animates the opacity to 0.0 in order to hide unnecessary drawables
+             var hideSelectedDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_selected, "opacity", null, 0, kMarker_AnimationDuration_ChangeDrawable);
+
              var hideIdleDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle, "opacity", null, 0.0, kMarker_AnimationDuration_ChangeDrawable);
 
              var hideGreenAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle_green, "opacity", null, 0.0, kMarker_AnimationDuration_ChangeDrawable);
 
-             // create AR.PropertyAnimation that animates the opacity to 1.0 in order to show the idle-state-drawable
-            var showOrangeAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle_orange, "opacity", null, 1.0, kMarker_AnimationDuration_ChangeDrawable);
-             // create AR.PropertyAnimation that animates the opacity to 0.0 in order to hide the selected-state-drawable
-             var hideSelectedDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_selected, "opacity", null, 0, kMarker_AnimationDuration_ChangeDrawable);
-             // create AR.PropertyAnimation that animates the scaling of the idle-state-drawable to 1.0
-    // create AR.PropertyAnimation that animates the scaling of the idle-state-drawable to 1.2
+            // create AR.PropertyAnimation that animates the scaling of the idle-state-drawable to 1.2
             var idleDrawableResizeAnimationX = new AR.PropertyAnimation(marker.markerDrawable_idle, 'scale.x', null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {
                 amplitude: 2.0
             }));
@@ -457,10 +453,6 @@ Marker.prototype.setIdleOrange = function(marker) {
             var titleLabelResizeAnimationX = new AR.PropertyAnimation(marker.titleLabel, 'scale.x', null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {
                 amplitude: 2.0
             }));
-            // create AR.PropertyAnimation that animates the scaling of the description label to 1.2
-    //        var descriptionLabelResizeAnimationX = new AR.PropertyAnimation(marker.descriptionLabel, 'scale.x', null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {
-    //            amplitude: 2.0
-    //        }));
 
             // create AR.PropertyAnimation that animates the scaling of the idle-state-drawable to 1.2
             var idleDrawableResizeAnimationY = new AR.PropertyAnimation(marker.markerDrawable_idle, 'scale.y', null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {

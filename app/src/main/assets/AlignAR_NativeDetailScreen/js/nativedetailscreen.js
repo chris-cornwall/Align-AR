@@ -187,8 +187,14 @@ var World = {
 //		signal = signal.toFixed(3);
 //		console.log("Signal: " + signal['signal']);
 		//TODO: Need to make units smarter...
+		if (typeof (signal['snr']) == "number"){
 		$("#poi-detail-strength").html((signal['snr'].toFixed(3)) + " dB");
 		$("#poi-detail-angle").html((signal['angle'].toFixed(3)) + "°");
+		}
+		else{
+		    $("#poi-detail-strength").html("Currently Unavailable");
+            $("#poi-detail-angle").html("Currently Unavailable");
+		}
 
 
 		// show panel

@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                 return;
             }
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 0, this);
-        //lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 20000, 0, this);
+        lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 4000, 0, this);
 
 
         architectView.onResume();
