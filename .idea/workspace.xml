@@ -25,21 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00dc2e5f-12b9-486e-9009-6e960459e68d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/location.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/~$ris_cornwall_FYP_DRAFT1.docx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chris_cornwall_FYP_DRAFT1.docx" afterPath="$PROJECT_DIR$/chris_cornwall_FYP_DRAFT1.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/marker.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/marker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/nativedetailscreen.js" afterPath="$PROJECT_DIR$/app/src/main/assets/AlignAR_NativeDetailScreen/js/nativedetailscreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/antenna_alignment/nuig/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chris_cornwall_FYP_DRAFT2.docx" afterPath="$PROJECT_DIR$/chris_cornwall_FYP_DRAFT2.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chris_cornwall_FYP_DRAFT2.pdf" afterPath="$PROJECT_DIR$/chris_cornwall_FYP_DRAFT2.pdf" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -2540,7 +2527,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523799515301" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523919073366" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2588,7 +2575,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523799515302" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523919073366" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2771,7 +2758,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523799515304" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523919073369" />
       </method>
     </configuration>
     <list size="1">
