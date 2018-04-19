@@ -7,20 +7,20 @@ function Signal(poiData, distance) {
 
     if (typeof parseInt(localStorage.getItem("rxRecGain")) == "number"){
          rxRecGain = parseInt(localStorage.getItem("rxRecGain"));
-        console.log("rxRecGain from storage: " + localStorage.getItem("rxRecGain"));
+       // console.log("rxRecGain from storage: " + localStorage.getItem("rxRecGain"));
         }
 
     if (typeof parseInt(localStorage.getItem("rxConLoss"))== "number"){
              rxConLoss = localStorage.getItem("rxConLoss");
-            console.log("rxConLoss from storage: " + localStorage.getItem("rxConLoss"));
+           // console.log("rxConLoss from storage: " + localStorage.getItem("rxConLoss"));
             }
 
     if (typeof parseInt(localStorage.getItem("rxCableLoss"))== "number"){
             rxCableLoss = localStorage.getItem("rxCableLoss");
-            console.log("rxCableLoss from storage: " + localStorage.getItem("rxCableLoss"));
+           // console.log("rxCableLoss from storage: " + localStorage.getItem("rxCableLoss"));
             }
 
-            console.log("FINAL RESULT: \n" + rxRecGain + "\n" + rxConLoss + "\n" + rxCableLoss);
+           // console.log("FINAL RESULT: \n" + rxRecGain + "\n" + rxConLoss + "\n" + rxCableLoss);
     var
         poiData = poiData;
         distance = distance;
@@ -83,13 +83,13 @@ function Signal(poiData, distance) {
    if(typeof rxConLoss == "number"){
         rxConLoss = parseInt(document.forms["sigForm"]["rConLoss"].value);
         localStorage.setItem("rxConLoss", rxConLoss);
-        console.log("Changing rConLoss to: " + rxConLoss);
+        //console.log("Changing rConLoss to: " + rxConLoss);
        }
 
     if(typeof rxCableLoss == "number"){
         rxCableLoss = parseInt(document.forms["sigForm"]["rCableLoss"].value);
         localStorage.setItem("rxCableLoss", rxCableLoss);
-        console.log("Changing rCableLoss to: " + rxCableLoss);
+        //console.log("Changing rCableLoss to: " + rxCableLoss);
        }
 
  }
@@ -98,9 +98,9 @@ function Signal(poiData, distance) {
 function getAngle(poiData, distance){
     //TODO: Validate..
     var antennaElevation = parseInt(poiData.elevation);
-    console.log("Antenna Elevation: " + antennaElevation);
+    //console.log("Antenna Elevation: " + antennaElevation);
     var userElevation = parseInt(World.userLocation.altitude);
-    console.log("User Elevation: " + userElevation);
+   // console.log("User Elevation: " + userElevation);
 
     // In the unlikely event that the user is higher than the antenna, the markers will display this
     // Handle both antenna higher than user and vice versa
@@ -114,7 +114,7 @@ function getAngle(poiData, distance){
     }
 
     var B = distance;
-    console.log("Distance (b): " + B);
+    //console.log("Distance (b): " + B);
 
     var angle = Math.asin(A/B).toDeg();
 //    console.log("Suggested angle before toDeg: " + Math.asin(A/B));

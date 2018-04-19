@@ -16,6 +16,7 @@ $count = mysqli_num_rows($result);
 if ($count > 0){
 echo "count = " . $count ."";
 $_SESSION['name'] = $username;
+$_SESSION['loggedIn'] = true;    
 header('Location: view_summary.php');
 }else{
 //3.1.3 If the login credentials doesn't match, he will be shown with an error message.

@@ -10,9 +10,8 @@
         
         <meta name="google-signin-client_id" content="962339483613-qet1cck0p62fh7mi4lsgnj3r25r43s62.apps.googleusercontent.com">
         <div> <a href="logout.php" onclick="sign_out();">Sign out</a></div>
-        <div> <a href="#" onclick="validate_user();">Validate User</a></div>
         
-       
+     
     </head>  
     <body onload="gapi.load('client', start)">  
         
@@ -21,7 +20,13 @@
             <br />
 			<br />
 			<div class="table-responsive">  
-				<h3 align="center">Align AR</h3><br />
+				<img src="images/logo.png" style="display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 15%;                             
+                    width: 25%;
+                    padding: 10px;
+                    text-align: center;"><br>
 				<span id="result"></span>
 				<div id="live_data"></div>                 
 			</div>  
@@ -29,19 +34,6 @@
     </body> 
 </html>  
 <script>
-    function validate_user()
-    
-        {
-            console.log("VALIDATING USER....");
-            var auth2 = gapi.auth2.getAuthInstance();
-            if (auth2.isSignedIn.get()){
-            console.log("USER IS SIGNED IN");
-            }
-            else{
-                console.log("USER IS NOT SIGNED IN");
-               // window.location = "http://danu6.it.nuigalway.ie/ITChris";
-            }
-        } 
     
         function checkFlag() {
     if(start() == false) {
@@ -56,6 +48,8 @@
 
   function start()
   {   
+      
+   
       if(gapi.client == null){
           return false;
       }
@@ -143,7 +137,7 @@ $(document).ready(function(){
     });  
     
 	function edit_data(id, text, column_name)  
-    {  
+    {   
         $.ajax({  
             url:"edit.php",  
             method:"POST",  
@@ -152,6 +146,7 @@ $(document).ready(function(){
             success:function(data){  
                 //alert(data);
 				$('#result').html("<div class='alert alert-success'>"+data+"</div>");
+                fetch_data();
             }  
         });  
     }  

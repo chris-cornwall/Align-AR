@@ -84,6 +84,8 @@ var World = {
 
         World.markerList.forEach(marker => filterMarkers(marker));
 
+        // categorize marks by expected power
+        categorizeMarkers();
 		// set distance slider to 100%
 		$("#panel-distance-range").val(100);
 		$("#panel-distance-range").slider("refresh");
@@ -188,12 +190,16 @@ var World = {
 //		console.log("Signal: " + signal['signal']);
 		//TODO: Need to make units smarter...
 		if (typeof (signal['snr']) == "number"){
-		$("#poi-detail-strength").html((signal['snr'].toFixed(3)) + " dB");
-		$("#poi-detail-angle").html((signal['angle'].toFixed(3)) + "°");
+		    $("#poi-detail-strength").html((signal['snr'].toFixed(3)) + " dB");
 		}
+		else {
+		    $("#poi-detail-strength").html("Unavailable");
+		}
+		if (typeof (signal['angle']) == "number"){
+		    $("#poi-detail-angle").html((signal['angle'].toFixed(3)) + "°");
+		    }
 		else{
-		    $("#poi-detail-strength").html("Currently Unavailable");
-            $("#poi-detail-angle").html("Currently Unavailable");
+            $("#poi-detail-angle").html("Unavailable");
 		}
 
 
@@ -212,7 +218,7 @@ var World = {
 	onScreenClick: async function onScreenClickFn() {
     // TODO: TRY CATCH
 	    await World.reloadPlaces();
-	    categorizeMarkers();
+	    //categorizeMarkers();
 		// you may handle clicks on empty AR space too
 	},
 
@@ -404,6 +410,7 @@ function filterMarkers(Marker) {
                              calcDist(newMarkerCoord.latitude, newMarkerCoord.longitude, userData)){
                                 console.log("Going to remove marker: " + World.markerList[i].poiData.id);
                                 World.markerList[i].setIdleDeselected(World.markerList[i])
+                                World.markerList[i].setIdleDeselected(World.markerList[i])
                              }
                          else{
                             Marker.setIdleDeselected(Marker);
@@ -415,16 +422,19 @@ function filterMarkers(Marker) {
 
 }
 function categorizeMarkers(){
-  for (var i=0; i<World.markerList.length; i++){
-  	var signal = new Signal(World.markerList[i].poiData, World.markerList[i].distanceToUser);
-    var signalStrength  = parseFloat(signal['snr']);
-    if (signalStrength >= 20){
-          World.markerList[i].setIdleGreen(World.markerList[i]);
+    for (var i=0; i<World.markerList.length; i++){
+  	    var signal = new Signal(World.markerList[i].poiData, World.markerList[i].distanceToUser);
+        var signalStrength  = parseFloat(signal['snr']);
+        console.log("Marker: " + World.markerList[i].poiData.title + "; Strength " + signal['snr']);
+       // World.markerList[i].setIdleGreen(World.markerList[i]);
+        if (signalStrength >= 20){
+            World.markerList[i].setIdleGreen(World.markerList[i]);
         }
-    if (signalStrength >= 10 && signalStrength < 20){
-          World.markerList[i].setIdleOrange(World.markerList[i]);
+        if (signalStrength >= 10 && signalStrength < 20){
+            World.markerList[i].setIdleOrange(World.markerList[i]);
+        }
+        filterMarkers(World.markerList[i]);
     }
-  }
 }
 
 
