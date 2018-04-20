@@ -237,11 +237,11 @@ console.log("SET DESELECTED");
     if (marker.animationGroup_idle === null) {
 
         // create AR.PropertyAnimation that animates the opacity to 1.0 in order to show the idle-state-drawable
-        var showIdleDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle, "opacity", null, 1.0, kMarker_AnimationDuration_ChangeDrawable);
+        var showIdleDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle, "opacity", null, 0.0, kMarker_AnimationDuration_ChangeDrawable);
         // create AR.PropertyAnimation that animates the opacity to 0.0 in order to hide the selected-state-drawable
         var hideSelectedDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_selected, "opacity", null, 0, kMarker_AnimationDuration_ChangeDrawable);
 
-        var hideGreenAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle_green, "opacity", null, 0.0, kMarker_AnimationDuration_ChangeDrawable);
+        var hideGreenAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle_green, "opacity", null, 1.0, kMarker_AnimationDuration_ChangeDrawable);
 
         var hideOrangeAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle_orange, "opacity", null, 0.0, kMarker_AnimationDuration_ChangeDrawable);
 
