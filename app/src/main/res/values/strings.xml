@@ -1,8 +1,19 @@
 <resources>
-    <string name="app_name">Wikitude POI</string>
-    <string name="action_settings">Settings</string>
-    <string name="lbl_you_are_at">YOU ARE AT</string>
-    <string name="btn_get_location">GET MY LOCATION</string>
-    <string name="btn_start_location_updates">START LOCATION UPDATES</string>
-    <string name="btn_stop_location_updates">STOP LOCATION UPDATES</string>
+    <string name="app_name">Align AR</string>
+    <string name="provider_disabled">Location service disabled</string>
+    <string name="provider_enabled">Location service enabled</string>
+    <string name="provider_new_status">Current Location: %2$s</string>
+    <string name="new_location">New Location : Latitude = %1$f, Longitude = %2$f, Altitude = %3$f with precision of %4$f meters</string>
+    <string name="main">Camera</string>
+    <string name="title_activity_carte">Map</string>
+    <string name="carte">Map</string>
+    <string name="Retour">Back</string>
+    <string name="ENT">ENT</string>
+    <string name="FDS">FDS</string>
+    <string name="agenda">Calendar</string>
+    <string name="galerie">Gaallery</string>
+    <string name="addPoi">Add antenna location</string>
+    <string name="createNote">Create note</string>
+    <string name="menu">Menu</string>
+    <string name="title_activity_receiver">ReceiverActivity</string>
 </resources>
