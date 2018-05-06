@@ -35,7 +35,7 @@
           </td> <td><label style = "padding-left: 75px;">
       <input type="checkbox" checked="checked" name="remember" > Remember me
     </label> </td>
-      </table><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </table>
     
   </div>
 
